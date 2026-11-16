@@ -6,11 +6,11 @@ BIN=uc_send uc_receive
 
 all: $(BIN)
 
-uc_send: uc_send.c uc_common.c uc_common.h
-	$(CC) $(CFLAGS) -o $@ uc_send.c uc_common.c $(LDFLAGS)
+uc_send: uc_send.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
-uc_receive: uc_receive.c uc_common.c uc_common.h
-	$(CC) $(CFLAGS) -o $@ uc_receive.c uc_common.c $(LDFLAGS)
+uc_receive: uc_receive.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
 	rm -f $(BIN)

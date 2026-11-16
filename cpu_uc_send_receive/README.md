@@ -2,7 +2,7 @@
 
 最简的 RDMA UC（Unreliable Connected）send/recv 应用示例。
 
-发送端与接收端分别实现在两个 C 文件中。
+发送端与接收端分别独立实现，各为一个 C 文件，无公共文件。
 
 ## 环境
 
@@ -16,7 +16,6 @@
 
 - `uc_send.c` — 发送端
 - `uc_receive.c` — 接收端
-- `uc_common.c` / `uc_common.h` — 公共代码
 - `Makefile`
 
 ## 编译
